@@ -11,5 +11,8 @@ function addDiv(){
   counter++;
   var newDiv = $('<div></div>');
   newDiv.append('<p>' + counter + '</p>');
+  newDiv.append('<button class="newBtns">Swap</button>');
+  newDiv.append('<button class="newBtns">Delete</button>');
+
   $('body').append(newDiv);
 }
