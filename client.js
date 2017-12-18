@@ -5,7 +5,8 @@ var counter = 0;
 function start(){
   console.log('In DOM');
   $('#generateBtn').on('click', addDiv);
-  $('body').on('click', '#swapBtn',swapButton);
+  $('body').on('click', '#swapBtn', swapButton);
+  $('body').on('click', '#deletebtn', deleteButton);
 }
 
 function addDiv(){
@@ -20,4 +21,8 @@ function addDiv(){
 function swapButton(){
   //$(this).closest('div').css('background-color', 'yellow');
   $(this).closest('div').toggleClass('yellow');
+}
+
+function deleteButton(){
+  $(this).parent().remove();
 }
